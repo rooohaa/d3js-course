@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  max-width: 1200px;
+  width: 100%;
+
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+
+  padding: 8px 0;
+  background-color: #f3f3f3;
+}
+
+header img {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+}
+
+header h1 {
+  color: #333;
+}
+
+main {
+  padding: 32px 0;
+}
