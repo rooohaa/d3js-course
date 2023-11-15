@@ -8,6 +8,12 @@ console.log("Star Break Coffee");
 
 let revenuesData;
 
+let svg = d3
+  .select("#svg-area")
+  .append("svg")
+  .attr("width", 800)
+  .attr("height", 400);
+
 document.addEventListener("DOMContentLoaded", () => {
   loadData().then(() => {
     // Render bar chart

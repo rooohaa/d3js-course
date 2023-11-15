@@ -9,8 +9,6 @@ d3.json("./data/buildings.json").then((data) => {
 });
 
 function drawChart() {
-  const y = d3.scaleLinear().domain([0, 828]).range([0, 400]);
-
   const svg = d3
     .select("#app")
     .append("svg")
@@ -23,8 +21,9 @@ function drawChart() {
     .data(buildings)
     .enter()
     .append("rect")
-    .attr("width", 35)
-    .attr("height", (item) => y(item.height))
-    .attr("fill", "gray")
-    .attr("x", (_, idx) => 50 * idx);
+    .attr("x", (_, i) => i * 60)
+    .attr("y", (item) => 400 - item.height)
+    .attr("width", 40)
+    .attr("height", (item) => item.height)
+    .attr("fill", "gray");
 }
